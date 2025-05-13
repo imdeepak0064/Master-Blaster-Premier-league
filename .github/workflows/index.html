@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MBPL Cricket League</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Header: MBPL logo and Title -->
+ 
+
+  <!-- Main app content -->
+  <main>
+    <!-- Home Section -->
+    <section id="home" class="section active">
+      <h2>Home</h2>
+      <p>Welcome to the Master Blaster Premier League! Stay updated with the latest news, live commentary, and match updates.</p>
+    </section>
+
+    <!-- Matches Section -->
+    <section id="matches" class="section">
+      <h2>Matches</h2>
+      <p>Here you will see the list of upcoming and past matches.</p>
+    </section>
+
+    <!-- Videos Section -->
+    <section id="videos" class="section">
+      <h2>Videos</h2>
+      <p>Watch the latest highlights, interviews, and behind-the-scenes videos.</p>
+    </section>
+
+    <!-- More Section (Main Menu for additional features) -->
+    <section id="more" class="section">
+      <h2>More</h2>
+      <ul class="more-list">
+        <li><a href="#" class="dynamic-btn">Highlights</a></li>
+        <li><a href="#" class="more-link dynamic-btn" data-target="fixtures">Fixtures</a></li>
+        <li><a href="#" class="more-link dynamic-btn" data-target="headToHead">Head To Head</a></li>
+        <li><a href="#" class="more-link dynamic-btn" data-target="teamComparison">Team Comparison</a></li>
+        <li><a href="#" class="more-link dynamic-btn" data-target="playerState">Player State</a></li>
+        <li><a href="#" class="more-link dynamic-btn" data-target="allTeams">All Teams</a></li>
+        <li><a href="#" class="more-link dynamic-btn" data-target="pointTable">Point Table</a></li>
+        <li><a href="#" class="more-link dynamic-btn" data-target="playoffs">Playoffs</a></li>
+        <li><a href="#" class="more-link dynamic-btn" data-target="aiFeatures">AI Features</a></li>
+      </ul>
+    </section>
+
+    <!-- highlight section -->
+    <section id="highlight" class="section">
+      <h2>highlight</h2>
+      <p>watch all matches highlight here.</p>
+       <button class="back-btn dynamic-btn" data-target="more">Back</button>
+    </section>
+    
+    <!-- Fixtures Section -->
+    <section id="fixtures" class="section">
+      <h2>Fixtures</h2>
+      <p>Check out all upcoming matches.</p>
+      <button class="back-btn dynamic-btn" data-target="more">Back</button>
+    </section>
+
+    <!-- Head To Head Section -->
+    <section id="headToHead" class="section">
+      <h2>Head To Head</h2>
+      <p>Select two players to compare their records:</p>
+      <form id="playerCompForm">
+        <label for="player1">Player 1:</label>
+        <select id="player1" name="player1">
+          <option value="playerX">Player X</option>
+          <option value="playerY">Player Y</option>
+          <option value="playerZ">Player Z</option>
+        </select>
+        <br /><br />
+        <label for="player2">Player 2:</label>
+        <select id="player2" name="player2">
+          <option value="playerX">Player X</option>
+          <option value="playerY">Player Y</option>
+          <option value="playerZ">Player Z</option>
+        </select>
+        <br /><br />
+        <button type="button" id="comparePlayers" class="dynamic-btn">Compare</button>
+      </form>
+      <button class="back-btn dynamic-btn" data-target="more">Back</button>
+    </section>
+
+    <!-- Team Comparison Section -->
+    <section id="teamComparison" class="section">
+      <h2>Team Comparison</h2>
+      <p>Select two teams to compare:</p>
+      <form id="teamCompForm">
+        <label for="team1">Team 1:</label>
+        <select id="team1" name="team1">
+          <option value="teamA">Team A</option>
+          <option value="teamB">Team B</option>
+          <option value="teamC">Team C</option>
+        </select>
+        <br /><br />
+        <label for="team2">Team 2:</label>
+        <select id="team2" name="team2">
+          <option value="teamA">Team A</option>
+          <option value="teamB">Team B</option>
+          <option value="teamC">Team C</option>
+        </select>
+        <br /><br />
+        <button type="button" id="compareTeams" class="dynamic-btn">Compare</button>
+      </form>
+      <button class="back-btn dynamic-btn" data-target="more">Back</button>
+    </section>
+
+    <!-- Player State Section -->
+    <section id="playerState" class="section">
+      <h2>Player State</h2>
+      <p>Select a year to view all player records:</p>
+      <form id="playerStateForm">
+        <label for="yearSelect">Select Year:</label>
+        <select id="yearSelect" name="yearSelect">
+          <option value="2020">2020</option>
+          <option value="2021">2021</option>
+          <option value="2022">2022</option>
+          <option value="2023">2023</option>
+        </select>
+        <br /><br />
+        <button type="button" id="viewPlayerStats" class="dynamic-btn">View Stats</button>
+      </form>
+      <div id="playerStatsResult" class="stats-result">
+        <p>Player records (runs, matches, average, strike rate, highest score, half centuries, centuries, ranking, etc.) will be displayed here.</p>
+      </div>
+      <button class="back-btn dynamic-btn" data-target="more">Back</button>
+    </section>
+
+    <!-- All Teams Section -->
+    <section id="allTeams" class="section">
+      <h2>All Teams</h2>
+      <p>List of all teams participating in the tournament.</p>
+      <button class="back-btn dynamic-btn" data-target="more">Back</button>
+    </section>
+
+    <!-- Point Table Section -->
+    <section id="pointTable" class="section">
+      <h2>Point Table</h2>
+      <p>Display team standings: matches played, wins, losses, draws, net run rate, and points (e.g., win = 2 points, draw = 1 point for each).</p>
+      <button class="back-btn dynamic-btn" data-target="more">Back</button>
+    </section>
+
+    <!-- Playoffs Section -->
+    <section id="playoffs" class="section">
+      <h2>Playoffs</h2>
+      <p>View which teams qualify for the semi-finals and finals.</p>
+      <button class="back-btn dynamic-btn" data-target="more">Back</button>
+    </section>
+
+    <!-- AI Features Section -->
+    <section id="aiFeatures" class="section">
+      <h2>AI Features</h2>
+      <ul class="ai-list">
+        <li><strong>Auto News Summarization</strong>: Get the latest match news summarized automatically.</li>
+        <li><strong>Match Prediction Chatbots</strong>: Chat and receive match predictions.</li>
+        <li><strong>Notification Generators</strong>: Receive live push notifications for match events.</li>
+        <li><strong>AI-Powered Commentary</strong>: Enjoy live commentary enhanced by AI.</li>
+      </ul>
+      <button class="back-btn dynamic-btn" data-target="more">Back</button>
+    </section>
+  </main>
+
+  <!-- Footer Navigation -->
+  <nav class="footer-nav">
+    <button data-target="home" class="active-btn dynamic-btn">Home</button>
+    <button data-target="matches" class="dynamic-btn">Matches</button>
+    <button data-target="videos" class="dynamic-btn">Videos</button>
+    <button data-target="more" class="dynamic-btn">More</button>
+  </nav>
+
+  <!-- Offline Popup Modal -->
+  <div id="offlineModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <p>Internet connection required! Please connect to the Internet to use this app.</p>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
+
+<!-- Firebase App -->
+<script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-app-compat.js"></script>
+
+<!-- Firestore -->
+<script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-firestore-compat.js"></script>
+
+<script>
+  const firebaseConfig = {
+    apiKey: "AIzaSyCwhe2nbP-itMV7xOC1_xkV4nsTHAJlPdM",
+    authDomain: "mbpl-cricket-app-e2559.firebaseapp.com",
+    projectId: "mbpl-cricket-app-e2559",
+    storageBucket: "mbpl-cricket-app-e2559.firebasestorage.app",
+    messagingSenderId: "165825872105",
+    appId: "1:165825872105:web:2a5fab631ecc94fe417078",
+  };
+  
+  firebase.initializeApp(firebaseConfig);
+  const db = firebase.firestore();
+</script>
